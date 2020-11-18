@@ -26,11 +26,15 @@ Our users will be able to learn about new cultures by bringing their ideas to th
 
 **Required Must-have Stories**
 
-* Log-In Page
-* Profile Page
-* User Feed
-* Explore Page
-* Liked Recipes Page
+* The user shall log in and log out.
+* The user shall create an account.
+* The user shall see the profile picture of another user.
+* The user shall edit their personal information.
+* The user shall see the posts from users they are following.
+* The user shall see the posts from users they have not followed.
+* The user shall search for other users.
+* The user shall like posts.
+* The user shall see posts they liked.
 
 **Optional Nice-to-have Stories**
 
@@ -40,29 +44,42 @@ Our users will be able to learn about new cultures by bringing their ideas to th
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
+* Login
+   * Requires log in to the user's account the first time they open this app or after they log out.
+* Register
+   * To register for an account.
+* Profile Screen
+   * To displaying the profile and posts of another user.
+* Settings Screen
+   * To edit the user's personal information including the username, password, and profile picture.
+* Following Feed Screen
+   * To feed posts from the users the user follows.
+* Liked Recipes Screen
+   * To displaying all posts/recipes they liked.
+* Recipe Feed of Followed Users
+   * To display the recipes from the users they follow.
+* Explore Screen
+   * To search for users and see recipes from users they have not followed.
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* Profile
+* Following Feed 
+* Liked Recipes
+* Recipe Feed of Followed Users
+* Explore Screen
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Forced login -> sign up for new account
+* Forced login -> feed page
+* Sign up -> feed page
+* Profile -> text field to modify
+* Following feed -> profile page of the users
+* Liked recipes -> profile page of the users
+* Explore -> profile page of the users
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
