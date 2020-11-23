@@ -86,7 +86,7 @@ Our users will be able to learn about new cultures by bringing their ideas to th
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="cookr-wireframe.jpg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
