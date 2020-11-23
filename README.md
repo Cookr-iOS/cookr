@@ -58,8 +58,6 @@ Our users will be able to learn about new cultures by bringing their ideas to th
    * To feed posts from the users the user follows.
 * Liked Recipes Screen
    * To displaying all posts/recipes they liked.
-* Recipe Feed of Followed Users
-   * To display the recipes from the users they follow.
 * Explore Screen
    * To search for users and see recipes from users they have not followed.
 
@@ -67,11 +65,12 @@ Our users will be able to learn about new cultures by bringing their ideas to th
 
 **Tab Navigation** (Tab to Screen)
 
-* Profile
 * Following Feed 
-* Liked Recipes
-* Recipe Feed of Followed Users
 * Explore Screen
+* Post Screen
+* Liked Recipes
+* Settings
+
 
 **Flow Navigation** (Screen to Screen)
 
@@ -82,7 +81,6 @@ Our users will be able to learn about new cultures by bringing their ideas to th
 * Following feed -> profile page of the users
 * Liked recipes -> profile page of the users
 * Explore -> profile page of the users
-* Recipe Feed -> post page
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
