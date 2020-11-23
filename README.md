@@ -48,6 +48,8 @@ Our users will be able to learn about new cultures by bringing their ideas to th
    * Requires log in to the user's account the first time they open this app or after they log out.
 * Register
    * To register for an account.
+* Post Screen
+   * To post a recipe.
 * Profile Screen
    * To displaying the profile and posts of another user.
 * Settings Screen
@@ -80,6 +82,7 @@ Our users will be able to learn about new cultures by bringing their ideas to th
 * Following feed -> profile page of the users
 * Liked recipes -> profile page of the users
 * Explore -> profile page of the users
+* Recipe Feed -> post page
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
