@@ -58,8 +58,6 @@ Our users will be able to learn about new cultures by bringing their ideas to th
    * To feed posts from the users the user follows.
 * Liked Recipes Screen
    * To displaying all posts/recipes they liked.
-* Recipe Feed of Followed Users
-   * To display the recipes from the users they follow.
 * Explore Screen
    * To search for users and see recipes from users they have not followed.
 
@@ -67,11 +65,12 @@ Our users will be able to learn about new cultures by bringing their ideas to th
 
 **Tab Navigation** (Tab to Screen)
 
-* Profile
 * Following Feed 
-* Liked Recipes
-* Recipe Feed of Followed Users
 * Explore Screen
+* Post Screen
+* Liked Recipes
+* Settings
+
 
 **Flow Navigation** (Screen to Screen)
 
@@ -82,7 +81,6 @@ Our users will be able to learn about new cultures by bringing their ideas to th
 * Following feed -> profile page of the users
 * Liked recipes -> profile page of the users
 * Explore -> profile page of the users
-* Recipe Feed -> post page
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
@@ -93,9 +91,18 @@ Our users will be able to learn about new cultures by bringing their ideas to th
 ### [BONUS] Interactive Prototype
 
 ## Schema 
-[This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+| Property      | Type     | Description |
+| ------------- | -------- | ------------|
+| postId        | String   | unique id for the user post (default field) |
+| author        | Pointer to User| author of the post |
+| image         | File     | image that user posts |
+| recipeName    | String   | name of the recipe |
+| ingredients   | String   | ingredients of the recipe |
+| instructions  | String   | instruction of the recipe |
+| likesCount    | Number   | number of likes for the post |
+| createdAt     | DateTime | date when post is created (default field) |
+
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
