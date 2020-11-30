@@ -26,7 +26,7 @@ Our users will be able to learn about new cultures by bringing their ideas to th
 
 **Required Must-have Stories**
 
-- [ ] The user shall log in and log out.
+- [x] The user shall log in and log out.
 - [ ] The user shall create an account.
 - [ ] The user shall see the profile picture of another user.
 - [ ] The user shall edit their personal information.
