@@ -107,3 +107,10 @@ Our users will be able to learn about new cultures by bringing their ideas to th
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+## Milestone #1 Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+
+<img src='https://github.com/Cookr-iOS/cookr/blob/main/login-demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
