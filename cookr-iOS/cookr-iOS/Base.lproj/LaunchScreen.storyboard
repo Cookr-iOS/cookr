@@ -15,8 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="cookr-offwhite" translatesAutoresizingMaskIntoConstraints="NO" id="1Rs-u7-Cbz">
-                                <rect key="frame" x="85" y="326" width="244" height="244"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="cookr-red" translatesAutoresizingMaskIntoConstraints="NO" id="cGm-0f-HEP">
+                                <rect key="frame" x="70" y="311" width="275" height="275"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -30,6 +30,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cookr-offwhite" width="1024" height="1024"/>
+        <image name="cookr-red" width="1024" height="1024"/>
     </resources>
 </document>
