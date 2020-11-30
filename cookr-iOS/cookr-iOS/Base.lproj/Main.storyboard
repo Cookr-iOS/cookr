@@ -4,13 +4,14 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="cookr_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Login View Controller" customClass="ViewController" customModule="cookr_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,10 +75,118 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-197.10144927536234" y="115.84821428571428"/>
+            <point key="canvasLocation" x="272" y="116"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="vHO-q4-xxy">
+            <objects>
+                <viewController id="wMv-Op-vbL" userLabel="Profile View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AQN-HD-Gfa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="JtK-1K-0uI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kwh-xH-r9l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1116" y="116"/>
+        </scene>
+        <!--Create Recipe View Controller-->
+        <scene sceneID="61E-s0-q8t">
+            <objects>
+                <viewController id="l7J-u1-Hur" userLabel="Create Recipe View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y0w-r8-Qsw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Tb7-FN-0J6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g0o-yE-o3H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="699" y="773"/>
+        </scene>
+        <!--Explore Recipes View Controller-->
+        <scene sceneID="FrM-D0-4EJ">
+            <objects>
+                <viewController id="mwX-hZ-uIr" userLabel="Explore Recipes View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gtb-Pw-SEb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vbc-8L-WQG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oio-1D-asF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="699" y="1456"/>
+        </scene>
+        <!--Following View Controller-->
+        <scene sceneID="WfU-ph-WTQ">
+            <objects>
+                <viewController id="pdt-PE-Bw2" userLabel="Following View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jIV-Gv-ASe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Vra-fL-RW3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RxI-gy-bgb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-162" y="1456"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="sAl-Jl-YOw">
+            <objects>
+                <viewController id="WuU-El-muJ" userLabel="Register View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Izv-w4-UOU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="T9r-PM-koa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HbM-Mu-yuO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-162" y="773"/>
+        </scene>
+        <!--Recipe Feed View Controller-->
+        <scene sceneID="ux9-sg-b7c">
+            <objects>
+                <viewController id="Qbg-4V-yNi" userLabel="Recipe Feed View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ubl-hk-2v4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="B6l-VO-eZI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vsu-jR-zwi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1506" y="1456"/>
+        </scene>
+        <!--Liked Recipes View Controller-->
+        <scene sceneID="Co6-cc-knS">
+            <objects>
+                <viewController id="hn6-ef-Vek" userLabel="Liked Recipes View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h8l-3M-6au">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="eOi-3V-Sic"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l8J-iw-tng" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1506" y="787"/>
         </scene>
     </scenes>
     <resources>
         <image name="cookr-white" width="1024" height="1024"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
