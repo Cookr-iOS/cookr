@@ -24,10 +24,10 @@ class profileViewController: UIViewController, MessageInputBarDelegate, UIImageP
     
     var showsCommentBar = true
 
-     var refreshControl: UIRefreshControl!
-     var selectedPost: PFObject!
+    var refreshControl: UIRefreshControl!
+    var selectedPost: PFObject!
     
-   //@IBOutlet weak var bb: UILabel!
+    //@IBOutlet weak var bb: UILabel!
     
     @IBOutlet weak var profPic: UIImageView!
  
@@ -36,29 +36,31 @@ class profileViewController: UIViewController, MessageInputBarDelegate, UIImageP
     //  @IBOutlet weak var bio: UILabel!
     
     
-  //  @IBOutlet weak var buttonB: UIButton!
+    //  @IBOutlet weak var buttonB: UIButton!
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         //Bio.text = self.hi as? String
-      //  self.bio = bio.text
-       //let comment = PFObject(className: "comment")
+        //self.bio = bio.text
+        //let comment = PFObject(className: "comment")
         //self.hi.text = comment["bio"] as? String
         commentBar.inputTextView.placeholder = "Update Bio..."
-              commentBar.sendButton.title = "Post"
-              commentBar.delegate = self
+        commentBar.sendButton.title = "Post"
+        commentBar.delegate = self
         
     
     
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool)
+    {
         super.viewDidAppear(animated)
-        let people = PFObject(className: "User")
         
+        let people = PFObject(className: "User")
         let comment = PFObject(className: "comment")
 
-//                        let comment = (people["comment"] as? [PFObject]) ?? []
+        //let comment = (people["comment"] as? [PFObject]) ?? []
         //comment["author"] = PFUser.current()
         
         self.userName.text = PFUser.current()?.username
@@ -97,7 +99,7 @@ class profileViewController: UIViewController, MessageInputBarDelegate, UIImageP
                     }
                 }
             }
-        }
+    }
         
     override var inputAccessoryView: UIView? {
         return commentBar
@@ -111,10 +113,10 @@ class profileViewController: UIViewController, MessageInputBarDelegate, UIImageP
     func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
              //Create the comment
             let comment = PFObject(className: "comment")
-        comment["bio"] = text
+            comment["bio"] = text
             comment["author"] = PFUser.current()
             
-        self.hi.text = comment["bio"] as? String
+            self.hi.text = comment["bio"] as? String
       
         
         comment.saveInBackground { (success, error) in
