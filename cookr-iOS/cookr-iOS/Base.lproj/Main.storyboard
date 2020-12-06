@@ -272,10 +272,10 @@
             </objects>
             <point key="canvasLocation" x="1978" y="779"/>
         </scene>
-        <!--Recipe Feed View Controller-->
+        <!--Feed View Controller-->
         <scene sceneID="ux9-sg-b7c">
             <objects>
-                <viewController id="Qbg-4V-yNi" userLabel="Recipe Feed View Controller" customClass="FeedViewController" customModule="cookr_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Qbg-4V-yNi" userLabel="Feed View Controller" customClass="FeedViewController" customModule="cookr_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ubl-hk-2v4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
