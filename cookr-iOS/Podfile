@@ -8,6 +8,7 @@ target 'cookr-iOS' do
   # Pods for cookr-iOS
   pod 'Parse'
   pod 'AlamofireImage'
+  pod 'MessageInputBar'
 
   target 'cookr-iOSTests' do
     inherit! :search_paths
