@@ -22,7 +22,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Login View Controller" customClass="ViewController" customModule="cookr_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Login View Controller" customClass="LoginViewController" customModule="cookr_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,6 +65,9 @@
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" red="0.96470588235294119" green="0.20392156862745098" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RXh-BJ-otG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIl-jQ-1Sg">
                                 <rect key="frame" x="231" y="616" width="124" height="36"/>
@@ -74,6 +77,9 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" red="0.96470588239999999" green="0.20392156859999999" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rbn-5k-FeC"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="cookr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xY0-bX-R2g">
                                 <rect key="frame" x="162" y="284" width="89" height="34"/>
@@ -90,6 +96,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.96470588235294119" green="0.20392156862745098" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordField" destination="tUU-iF-wjI" id="QGf-bK-zp6"/>
+                        <outlet property="usernameField" destination="z4y-MB-47r" id="zEB-jH-Doo"/>
+                        <segue destination="giL-8e-t7O" kind="presentation" identifier="loginSegue" id="uXL-3L-l9H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -108,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kwh-xH-r9l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1116" y="116"/>
+            <point key="canvasLocation" x="-26" y="773"/>
         </scene>
         <!--Create Recipe View Controller-->
         <scene sceneID="61E-s0-q8t">
@@ -168,22 +179,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HbM-Mu-yuO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-162" y="773"/>
+            <point key="canvasLocation" x="2172" y="773"/>
         </scene>
         <!--Recipe Feed View Controller-->
         <scene sceneID="ux9-sg-b7c">
             <objects>
-                <viewController id="Qbg-4V-yNi" userLabel="Recipe Feed View Controller" sceneMemberID="viewController">
+                <viewController id="Qbg-4V-yNi" userLabel="Recipe Feed View Controller" customClass="FeedViewController" customModule="cookr_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ubl-hk-2v4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="B6l-VO-eZI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="pfY-BV-6Xh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vsu-jR-zwi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1506" y="1456"/>
+            <point key="canvasLocation" x="2013.0434782608697" y="115.84821428571428"/>
         </scene>
         <!--Liked Recipes View Controller-->
         <scene sceneID="Co6-cc-knS">
@@ -198,7 +210,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l8J-iw-tng" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1506" y="787"/>
+            <point key="canvasLocation" x="1451" y="773"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Xhn-vE-quD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="giL-8e-t7O" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LRH-dC-dzW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Qbg-4V-yNi" kind="relationship" relationship="rootViewController" id="Mi1-tM-3fz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1dH-wc-fWA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1102.8985507246377" y="115.84821428571428"/>
         </scene>
     </scenes>
     <resources>

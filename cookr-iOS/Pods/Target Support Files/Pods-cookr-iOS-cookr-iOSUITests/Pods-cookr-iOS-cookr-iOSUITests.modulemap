@@ -1,0 +1,6 @@
+framework module Pods_cookr_iOS_cookr_iOSUITests {
+  umbrella header "Pods-cookr-iOS-cookr-iOSUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
