@@ -94,7 +94,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.96470588235294119" green="0.20392156862745098" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.30196078431372547" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="passwordField" destination="tUU-iF-wjI" id="QGf-bK-zp6"/>
@@ -119,22 +119,113 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kwh-xH-r9l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-26" y="773"/>
+            <point key="canvasLocation" x="271" y="779"/>
         </scene>
         <!--Create Recipe View Controller-->
         <scene sceneID="61E-s0-q8t">
             <objects>
                 <viewController id="l7J-u1-Hur" userLabel="Create Recipe View Controller" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y0w-r8-Qsw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="[Enter your ingredients here]" translatesAutoresizingMaskIntoConstraints="NO" id="P9u-sI-oMs">
+                                <rect key="frame" x="20" y="458" width="374" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="[Enter your recipe's steps here]" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SV5-Bi-p89">
+                                <rect key="frame" x="20" y="654" width="374" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WaW-qQ-YC8">
+                                <rect key="frame" x="20" y="429" width="96" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="16"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Steps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHm-Ar-Q99">
+                                <rect key="frame" x="20" y="625" width="48" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ingredients-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="JGf-bd-lvA">
+                                <rect key="frame" x="45" y="74" width="325" height="325"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Tb7-FN-0J6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" title="cookr" id="3jL-kc-YuB">
+                        <barButtonItem key="rightBarButtonItem" title="Post" id="nFR-em-KMp">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g0o-yE-o3H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="699" y="773"/>
+            <point key="canvasLocation" x="3747.826086956522" y="115.84821428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="98N-sI-lt7">
+            <objects>
+                <viewController id="w0F-wh-rvf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="teb-ah-I6L">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Sqo-fI-H4n"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PyL-Aa-gbO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b6C-nm-3rm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2333" y="3375"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3Uy-wi-xib">
+            <objects>
+                <viewController id="lWJ-Xy-SUW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sdE-4c-lCM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="0Jn-Fs-tmy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PvW-Z1-EM7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iLD-aG-9Cn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2333" y="2670"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="HFU-ka-iDj">
+            <objects>
+                <tabBarController id="bkU-Rr-xFX" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4Ri-Yu-aYx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="f9m-p2-LQN" kind="relationship" relationship="viewControllers" id="dJY-2w-lfa"/>
+                        <segue destination="vdc-Vv-1G5" kind="relationship" relationship="viewControllers" id="Yka-8q-aIG"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k9D-Kk-WLs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="533" y="2980"/>
         </scene>
         <!--Explore Recipes View Controller-->
         <scene sceneID="FrM-D0-4EJ">
@@ -149,7 +240,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oio-1D-asF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="699" y="1456"/>
+            <point key="canvasLocation" x="1103" y="1456"/>
         </scene>
         <!--Following View Controller-->
         <scene sceneID="WfU-ph-WTQ">
@@ -164,7 +255,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RxI-gy-bgb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-162" y="1456"/>
+            <point key="canvasLocation" x="270" y="1456"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="sAl-Jl-YOw">
@@ -179,7 +270,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HbM-Mu-yuO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2172" y="773"/>
+            <point key="canvasLocation" x="1978" y="779"/>
         </scene>
         <!--Recipe Feed View Controller-->
         <scene sceneID="ux9-sg-b7c">
@@ -189,13 +280,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="B6l-VO-eZI"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" id="pfY-BV-6Xh"/>
+                    <navigationItem key="navigationItem" title="cookr" id="pfY-BV-6Xh">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="whisk" id="tJI-oj-HkX">
+                            <connections>
+                                <segue destination="8sn-Zy-oZY" kind="presentation" id="01p-BL-K0u"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vsu-jR-zwi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2013.0434782608697" y="115.84821428571428"/>
+            <point key="canvasLocation" x="1977" y="116"/>
         </scene>
         <!--Liked Recipes View Controller-->
         <scene sceneID="Co6-cc-knS">
@@ -210,7 +307,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l8J-iw-tng" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1451" y="773"/>
+            <point key="canvasLocation" x="1103" y="779"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Xhn-vE-quD">
@@ -220,6 +317,14 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LRH-dC-dzW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="16"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -228,11 +333,74 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1dH-wc-fWA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1102.8985507246377" y="115.84821428571428"/>
+            <point key="canvasLocation" x="1103" y="116"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="tDr-aR-UBr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f9m-p2-LQN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 1" id="O4P-6e-9mA"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="M16-1v-44v">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lWJ-Xy-SUW" kind="relationship" relationship="rootViewController" id="TiL-Yz-qKo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gFd-8u-M0E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1423" y="2670"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="q9j-xJ-Xxw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vdc-Vv-1G5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 2" id="Ikq-mI-gLZ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Pe-Xg-IPg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="w0F-wh-rvf" kind="relationship" relationship="rootViewController" id="GoT-Cs-kuL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f4G-5b-vmb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1423" y="3375"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DnF-1M-IWN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8sn-Zy-oZY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jmX-eG-ug2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="l7J-u1-Hur" kind="relationship" relationship="rootViewController" id="hOG-G7-XgI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y32-qD-Fki" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2837.68115942029" y="115.84821428571428"/>
         </scene>
     </scenes>
     <resources>
         <image name="cookr-white" width="1024" height="1024"/>
+        <image name="ingredients-placeholder" width="1024" height="1024"/>
+        <image name="whisk" width="75" height="75"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
