@@ -13,32 +13,42 @@ import MessageInputBar
 class profileViewController: UIViewController, MessageInputBarDelegate, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
     
+    @IBOutlet weak var Bio: UILabel!
     @IBOutlet weak var userName: UILabel!
     
     var posts = [PFObject]()
     var imageFiles = [PFFileObject]()
     let commentBar = MessageInputBar()
     
-    var showsCommentBar = false
+    @IBOutlet weak var updatebio: UILabel!
+    
+    var showsCommentBar = true
 
      var refreshControl: UIRefreshControl!
      var selectedPost: PFObject!
     
-   @IBOutlet weak var profPic: UIImageView!
+   //@IBOutlet weak var bb: UILabel!
+    
+    @IBOutlet weak var profPic: UIImageView!
  
    
-    @IBOutlet weak var bio: UILabel!
+    @IBOutlet weak var hi: UILabel!
+    //  @IBOutlet weak var bio: UILabel!
     
     
-    @IBOutlet weak var buttonB: UIButton!
+  //  @IBOutlet weak var buttonB: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //Bio.text = self.hi as? String
+      //  self.bio = bio.text
+       //let comment = PFObject(className: "comment")
+        //self.hi.text = comment["bio"] as? String
         commentBar.inputTextView.placeholder = "Update Bio..."
               commentBar.sendButton.title = "Post"
               commentBar.delegate = self
         
+    
     
     }
     
@@ -46,26 +56,30 @@ class profileViewController: UIViewController, MessageInputBarDelegate, UIImageP
         super.viewDidAppear(animated)
         let people = PFObject(className: "User")
         
-   
+        let comment = PFObject(className: "comment")
+
+//                        let comment = (people["comment"] as? [PFObject]) ?? []
+        //comment["author"] = PFUser.current()
+        
+        self.userName.text = PFUser.current()?.username
+        //self.Bio.text = comment["bio"] as? String
+      
+        
         
         let query = PFQuery(className: "User")
-        query.includeKeys(["author", "comments"])
+        query.includeKeys(["author", "comment", "bio"])
         query.findObjectsInBackground { (objects, error) in
             if error == nil
             {
                 if let returnedobjects = objects
                 {
-                    for object in returnedobjects
+                    for query in returnedobjects
                     {
 
-                        let comments = (people["comments"] as? [PFObject]) ?? []
-                        
-                        self.userName.text = PFUser.current()?.username
-                        
-//                        self.bio.text = comments["comments"] as? String
-                        
-                        
-                        let file = object["image"] as? PFFileObject
+                        let file = query["image"] as? PFFileObject
+                        //self.Bio.text = comment["bio"] as? String
+                      
+
                         
                         file?.getDataInBackground { (imageData: Data?, error: Error?) in
                             if let error = error {
@@ -73,6 +87,7 @@ class profileViewController: UIViewController, MessageInputBarDelegate, UIImageP
                             } else if let imageData = imageData {
                                 let image = UIImage(data: imageData)
                                 self.profPic.image = image
+                                self.Bio.text = query["bio"] as? String
                             }
                         }
 
@@ -94,14 +109,15 @@ class profileViewController: UIViewController, MessageInputBarDelegate, UIImageP
     
 
     func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
-            // Create the comment
+             //Create the comment
             let comment = PFObject(className: "comment")
-            comment["bio"] = text
+        comment["bio"] = text
             comment["author"] = PFUser.current()
             
-            selectedPost.add(comment, forKey: "bio")
-            
-            selectedPost.saveInBackground { (success, error) in
+        self.hi.text = comment["bio"] as? String
+      
+        
+        comment.saveInBackground { (success, error) in
                 if success {
                     print("Comment Saved!")
                 }
@@ -110,15 +126,21 @@ class profileViewController: UIViewController, MessageInputBarDelegate, UIImageP
                     print("Error Saving Comment!")
                 }
             }
+        
+        //updatebio.text = comment["bio"] as? String
             
-//            tableView.reloadData()
+           //self.reloadData()
             
             // Clear and dismiss the input bar
             commentBar.inputTextView.text = nil
             
             showsCommentBar = false
-            becomeFirstResponder()
+           becomeFirstResponder()
             commentBar.inputTextView.resignFirstResponder()
+        //self.Bio.text = comment["bio"] as? String
+       
+        
+       // return self.hi.text = comment["bio"] as? String
         }
         
         @objc func keyboardWillBeHidden(note: Notification) {
@@ -168,7 +190,7 @@ class profileViewController: UIViewController, MessageInputBarDelegate, UIImageP
         people.saveInBackground { (success, error) in
             if success {
       
-                self.dismiss(animated: true, completion: nil)
+                //self.dismiss(animated: true, completion: nil)
                 print("saved!")
             }
             else{

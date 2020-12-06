@@ -127,8 +127,8 @@
                                     <outletCollection property="gestureRecognizers" destination="xN1-Eu-a7K" appends="YES" id="121-N9-15a"/>
                                 </connections>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Here's my Bio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kme-7I-7Be">
-                                <rect key="frame" x="-2" y="286" width="374" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="Bio" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kme-7I-7Be">
+                                <rect key="frame" x="146" y="526" width="0.0" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -159,8 +159,15 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="addBio" text="update bio ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0B-7N-3RF">
-                                <rect key="frame" x="135" y="315" width="100" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DL-Ty-fYW">
+                                <rect key="frame" x="155" y="428" width="99" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="hh" text="Here is Bio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Wz-ex-sge">
+                                <rect key="frame" x="146" y="284" width="82" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -172,8 +179,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="cookr" id="4oK-PM-7M0"/>
                     <connections>
+                        <outlet property="Bio" destination="kme-7I-7Be" id="v2I-8g-W7I"/>
                         <outlet property="bio" destination="kme-7I-7Be" id="Krm-Be-92b"/>
+                        <outlet property="hi" destination="0Wz-ex-sge" id="84H-Nf-sFk"/>
                         <outlet property="profPic" destination="b9G-q1-bEC" id="NVX-FK-tEb"/>
+                        <outlet property="updatebio" destination="3DL-Ty-fYW" id="LJq-uV-ghw"/>
                         <outlet property="userName" destination="wlW-jB-sFC" id="LQP-u9-rKd"/>
                     </connections>
                 </viewController>
