@@ -115,7 +115,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="person.fill" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="b9G-q1-bEC">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="person.fill" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="b9G-q1-bEC" customClass="PFImageView">
                                 <rect key="frame" x="157" y="83.5" width="101" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="1" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -158,6 +158,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="cookr" id="4oK-PM-7M0"/>
                     <connections>
+                        <outlet property="hi" destination="b9G-q1-bEC" id="grF-Q8-WeE"/>
+                        <outlet property="pfPic" destination="b9G-q1-bEC" id="8AX-cs-Fks"/>
                         <outlet property="profPic" destination="b9G-q1-bEC" id="NVX-FK-tEb"/>
                     </connections>
                 </viewController>

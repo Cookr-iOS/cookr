@@ -14,32 +14,43 @@ class profileViewController: UIViewController, UIImagePickerControllerDelegate &
     
     var posts = [PFObject]()
     var imageFiles = [PFFileObject]()
+
+     var refreshControl: UIRefreshControl!
+     var selectedPost: PFObject!
     
-    @IBOutlet weak var profPic: UIImageView!
+   @IBOutlet weak var profPic: UIImageView!
  
-    
    
 
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+     
  
 //                (objects: [PFObject]?, error: NSError?) -> Void in
 
         let people = PFObject(className: "people")
-        let imageFile = people["image"] as! PFFileObject
-//        let urlString = imageFile.url!
+//        let hi = PFFileObject(name: "image.png", data: people as! Data)
+        let imageFile = people["image.png"] as! PFFileObject
+        
+        let urlString = imageFile.url!
+        let url = URL(string: urlString)!
+        profPic.imageFromUrl(urlString: url.absoluteString)
+
+        
+        
+//        let imageFile = profileViewController.getPFFileFromImage(image: people["image"] as? UIImage)
+//        let urlString = (imageFile?.url!)!
 //        let url = URL(string: urlString)!
-        imageFile.getDataInBackground { (imageData: Data?, error: Error?) in
-            if let error = error {
-                print(error.localizedDescription)
-            } else if let imageData = imageData {
-                let image = UIImage(data: imageData)
-                self.profPic.image = image
-            }
+//        profPic.imageFromUrl(urlString: url.absoluteString)
+//        imageFile.getDataInBackground { (imageData: Data?, error: Error?) in
+//            if let error = error {
+//                print(error.localizedDescription)
+//            } else if let imageData = imageData {
+//                let image = UIImage(data: imageData)
+//                self.profPic.image = image
+//            }
         }
 //        //let imageFile = people["image"] as! PFFileObject
 //        let imageFile = people.objectId?.appending("image") as! PFFileObject
@@ -47,11 +58,24 @@ class profileViewController: UIViewController, UIImagePickerControllerDelegate &
 //        let url = URL(string: urlString)!
 //
 //               //print(url)
-//      profPic.imageFromUrl(urlString: url.absoluteString)
+    
          
-    }
+    
 
-        
+//    override func viewDidAppear(_ animated: Bool) {
+//            super.viewDidAppear(animated)
+//
+//            let query = PFQuery(className: "Posts")
+//        query.includeKeys(["image"])
+////            query.findObjectsInBackground { (posts, error) in
+////                if posts != nil {
+////                    self.profPic =  UIImage(data: posts)
+////                    self.profPic.image = image
+////                }
+////            }
+//        }
+//
+//
         // Do any additional setup after loading the view.
   //  }
 //    override func viewDidAppear(_ animated: Bool) {
@@ -100,8 +124,7 @@ class profileViewController: UIViewController, UIImagePickerControllerDelegate &
             picker.sourceType = .photoLibrary
             
   
-            
-            
+        
         }
         
         present(picker, animated: true, completion: nil)
