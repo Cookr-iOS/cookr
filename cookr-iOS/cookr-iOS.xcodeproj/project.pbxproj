@@ -15,6 +15,7 @@
 		63A0033E2563BFDD006357D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63A0033C2563BFDD006357D1 /* LaunchScreen.storyboard */; };
 		63A003492563BFDD006357D1 /* cookr_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A003482563BFDD006357D1 /* cookr_iOSTests.swift */; };
 		63A003542563BFDD006357D1 /* cookr_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A003532563BFDD006357D1 /* cookr_iOSUITests.swift */; };
+		63E1BA71257C896300FF6054 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 63E1BA70257C896300FF6054 /* fonts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		63A0034F2563BFDD006357D1 /* cookr-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "cookr-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63A003532563BFDD006357D1 /* cookr_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cookr_iOSUITests.swift; sourceTree = "<group>"; };
 		63A003552563BFDD006357D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63E1BA70257C896300FF6054 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fonts; path = ../../../Assets/fonts; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				63A0033A2563BFDD006357D1 /* Assets.xcassets */,
 				63A0033C2563BFDD006357D1 /* LaunchScreen.storyboard */,
 				63A0033F2563BFDD006357D1 /* Info.plist */,
+				63E1BA70257C896300FF6054 /* fonts */,
 			);
 			path = "cookr-iOS";
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				63A0033E2563BFDD006357D1 /* LaunchScreen.storyboard in Resources */,
 				63A0033B2563BFDD006357D1 /* Assets.xcassets in Resources */,
 				63A003392563BFDC006357D1 /* Main.storyboard in Resources */,
+				63E1BA71257C896300FF6054 /* fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
