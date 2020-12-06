@@ -25,6 +25,7 @@
 		63A003492563BFDD006357D1 /* cookr_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A003482563BFDD006357D1 /* cookr_iOSTests.swift */; };
 		63A003542563BFDD006357D1 /* cookr_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A003532563BFDD006357D1 /* cookr_iOSUITests.swift */; };
 		72266688B99DADF9DEEB002F /* Pods_cookr_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7640C485B2333E2E40FB047B /* Pods_cookr_iOS.framework */; };
+		F487A1FF257D0D4800DA5DBC /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F487A1FE257D0D4800DA5DBC /* profileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		78F7EFECEFCE1D1444B252E3 /* Pods_cookr_iOS_cookr_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cookr_iOS_cookr_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80DE8A8253BF33310AC67AD4 /* Pods-cookr-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cookr-iOS.debug.xcconfig"; path = "Target Support Files/Pods-cookr-iOS/Pods-cookr-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F258A457D4CEDFF3363D9208 /* Pods_cookr_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cookr_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F487A1FE257D0D4800DA5DBC /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		F943DCC5FF70CF7BF21AE3C9 /* Pods-cookr-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cookr-iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-cookr-iOSTests/Pods-cookr-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				63A003312563BFDC006357D1 /* AppDelegate.swift */,
+				F487A1FE257D0D4800DA5DBC /* profileViewController.swift */,
 				63A003332563BFDC006357D1 /* SceneDelegate.swift */,
 				63A003352563BFDC006357D1 /* ViewController.swift */,
 				63A003372563BFDC006357D1 /* Main.storyboard */,
@@ -434,6 +437,7 @@
 			files = (
 				6317D037257C927E00E37134 /* LoginViewController.swift in Sources */,
 				63A003362563BFDC006357D1 /* ViewController.swift in Sources */,
+				F487A1FF257D0D4800DA5DBC /* profileViewController.swift in Sources */,
 				6317D03C257C932D00E37134 /* FeedViewController.swift in Sources */,
 				63A003322563BFDC006357D1 /* AppDelegate.swift in Sources */,
 				63A003342563BFDC006357D1 /* SceneDelegate.swift in Sources */,
