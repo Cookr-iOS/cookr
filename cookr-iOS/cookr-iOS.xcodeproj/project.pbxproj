@@ -11,6 +11,11 @@
 		5B1185F2F8F4DEF67DD0B488 /* Pods_cookr_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F258A457D4CEDFF3363D9208 /* Pods_cookr_iOSTests.framework */; };
 		6317D037257C927E00E37134 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6317D036257C927E00E37134 /* LoginViewController.swift */; };
 		6317D03C257C932D00E37134 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6317D03B257C932D00E37134 /* FeedViewController.swift */; };
+		6317D08D257CB89700E37134 /* Comfortaa-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6317D088257CB89700E37134 /* Comfortaa-SemiBold.ttf */; };
+		6317D08E257CB89700E37134 /* Comfortaa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6317D089257CB89700E37134 /* Comfortaa-Light.ttf */; };
+		6317D08F257CB89700E37134 /* Comfortaa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6317D08A257CB89700E37134 /* Comfortaa-Bold.ttf */; };
+		6317D090257CB89700E37134 /* Comfortaa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6317D08B257CB89700E37134 /* Comfortaa-Regular.ttf */; };
+		6317D091257CB89700E37134 /* Comfortaa-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6317D08C257CB89700E37134 /* Comfortaa-Medium.ttf */; };
 		63A003322563BFDC006357D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A003312563BFDC006357D1 /* AppDelegate.swift */; };
 		63A003342563BFDC006357D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A003332563BFDC006357D1 /* SceneDelegate.swift */; };
 		63A003362563BFDC006357D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A003352563BFDC006357D1 /* ViewController.swift */; };
@@ -19,7 +24,6 @@
 		63A0033E2563BFDD006357D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63A0033C2563BFDD006357D1 /* LaunchScreen.storyboard */; };
 		63A003492563BFDD006357D1 /* cookr_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A003482563BFDD006357D1 /* cookr_iOSTests.swift */; };
 		63A003542563BFDD006357D1 /* cookr_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A003532563BFDD006357D1 /* cookr_iOSUITests.swift */; };
-		63E1BA71257C896300FF6054 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 63E1BA70257C896300FF6054 /* fonts */; };
 		72266688B99DADF9DEEB002F /* Pods_cookr_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7640C485B2333E2E40FB047B /* Pods_cookr_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +50,11 @@
 		52351EBBE6665BA94D51BCA4 /* Pods-cookr-iOS-cookr-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cookr-iOS-cookr-iOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-cookr-iOS-cookr-iOSUITests/Pods-cookr-iOS-cookr-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6317D036257C927E00E37134 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6317D03B257C932D00E37134 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		6317D088257CB89700E37134 /* Comfortaa-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Comfortaa-SemiBold.ttf"; path = "../../../Assets/comfortaa/Comfortaa-SemiBold.ttf"; sourceTree = "<group>"; };
+		6317D089257CB89700E37134 /* Comfortaa-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Comfortaa-Light.ttf"; path = "../../../Assets/comfortaa/Comfortaa-Light.ttf"; sourceTree = "<group>"; };
+		6317D08A257CB89700E37134 /* Comfortaa-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Comfortaa-Bold.ttf"; path = "../../../Assets/comfortaa/Comfortaa-Bold.ttf"; sourceTree = "<group>"; };
+		6317D08B257CB89700E37134 /* Comfortaa-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Comfortaa-Regular.ttf"; path = "../../../Assets/comfortaa/Comfortaa-Regular.ttf"; sourceTree = "<group>"; };
+		6317D08C257CB89700E37134 /* Comfortaa-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Comfortaa-Medium.ttf"; path = "../../../Assets/comfortaa/Comfortaa-Medium.ttf"; sourceTree = "<group>"; };
 		63A0032E2563BFDC006357D1 /* cookr-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cookr-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63A003312563BFDC006357D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63A003332563BFDC006357D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,7 +69,6 @@
 		63A0034F2563BFDD006357D1 /* cookr-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "cookr-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63A003532563BFDD006357D1 /* cookr_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cookr_iOSUITests.swift; sourceTree = "<group>"; };
 		63A003552563BFDD006357D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		63E1BA70257C896300FF6054 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fonts; path = ../../../Assets/fonts; sourceTree = "<group>"; };
 		70EBBB571EF8E057EDC0AEE2 /* Pods-cookr-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cookr-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-cookr-iOSTests/Pods-cookr-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		7640C485B2333E2E40FB047B /* Pods_cookr_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cookr_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78F7EFECEFCE1D1444B252E3 /* Pods_cookr_iOS_cookr_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cookr_iOS_cookr_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,7 +137,11 @@
 				63A0033A2563BFDD006357D1 /* Assets.xcassets */,
 				63A0033C2563BFDD006357D1 /* LaunchScreen.storyboard */,
 				63A0033F2563BFDD006357D1 /* Info.plist */,
-				63E1BA70257C896300FF6054 /* fonts */,
+				6317D08A257CB89700E37134 /* Comfortaa-Bold.ttf */,
+				6317D089257CB89700E37134 /* Comfortaa-Light.ttf */,
+				6317D08C257CB89700E37134 /* Comfortaa-Medium.ttf */,
+				6317D08B257CB89700E37134 /* Comfortaa-Regular.ttf */,
+				6317D088257CB89700E37134 /* Comfortaa-SemiBold.ttf */,
 				6317D036257C927E00E37134 /* LoginViewController.swift */,
 				6317D03B257C932D00E37134 /* FeedViewController.swift */,
 			);
@@ -287,8 +299,12 @@
 			files = (
 				63A0033E2563BFDD006357D1 /* LaunchScreen.storyboard in Resources */,
 				63A0033B2563BFDD006357D1 /* Assets.xcassets in Resources */,
+				6317D091257CB89700E37134 /* Comfortaa-Medium.ttf in Resources */,
+				6317D08F257CB89700E37134 /* Comfortaa-Bold.ttf in Resources */,
+				6317D090257CB89700E37134 /* Comfortaa-Regular.ttf in Resources */,
+				6317D08D257CB89700E37134 /* Comfortaa-SemiBold.ttf in Resources */,
 				63A003392563BFDC006357D1 /* Main.storyboard in Resources */,
-				63E1BA71257C896300FF6054 /* fonts in Resources */,
+				6317D08E257CB89700E37134 /* Comfortaa-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

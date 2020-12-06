@@ -99,7 +99,8 @@
                     <connections>
                         <outlet property="passwordField" destination="tUU-iF-wjI" id="QGf-bK-zp6"/>
                         <outlet property="usernameField" destination="z4y-MB-47r" id="zEB-jH-Doo"/>
-                        <segue destination="bkU-Rr-xFX" kind="presentation" id="YR6-gP-jVn"/>
+                        <outlet property="view" destination="GWr-4f-M85" id="I2r-5b-VFs"/>
+                        <segue destination="bkU-Rr-xFX" kind="show" identifier="loginSegue" id="3o7-Sv-hwp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -203,6 +204,7 @@
         <scene sceneID="HFU-ka-iDj">
             <objects>
                 <tabBarController id="bkU-Rr-xFX" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="cp5-d0-u77"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4Ri-Yu-aYx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -260,6 +262,7 @@
                     <tabBarItem key="tabBarItem" title="Feed" image="doc.text.fill" catalog="system" id="FPt-3g-8PE"/>
                     <navigationItem key="navigationItem" title="cookr" id="pfY-BV-6Xh">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="whisk" id="tJI-oj-HkX">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="8sn-Zy-oZY" kind="presentation" id="01p-BL-K0u"/>
                             </connections>
