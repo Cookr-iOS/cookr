@@ -125,6 +125,7 @@
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="xN1-Eu-a7K" appends="YES" id="121-N9-15a"/>
+                                    <outletCollection property="gestureRecognizers" destination="yJ2-Nr-LVY" appends="YES" id="fmA-AW-lL8"/>
                                 </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="Bio" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kme-7I-7Be">
@@ -175,7 +176,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="T6G-G0-odx">
-                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
+                                <rect key="frame" x="0.0" y="359" width="414" height="483"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <viewLayoutGuide key="contentLayoutGuide" id="uCQ-RV-xn6"/>
@@ -218,6 +219,11 @@
                 <tapGestureRecognizer id="NMb-Ig-w9N">
                     <connections>
                         <action selector="hide:" destination="wMv-Op-vbL" id="nrm-xB-viG"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="yJ2-Nr-LVY">
+                    <connections>
+                        <action selector="ontapp:" destination="wMv-Op-vbL" id="RXr-LA-adL"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
