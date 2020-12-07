@@ -110,13 +110,6 @@
         <!--Profile View Controller-->
         <scene sceneID="vHO-q4-xxy">
             <objects>
-                <tapGestureRecognizer id="xN1-Eu-a7K">
-                    <connections>
-                        <action selector="tapPic:" destination="wMv-Op-vbL" id="hDl-Kp-x5g"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <navigationItem title="cookr" id="q5a-09-DYE"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kwh-xH-r9l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="wMv-Op-vbL" userLabel="Profile View Controller" customClass="profileViewController" customModule="cookr_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AQN-HD-Gfa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -195,8 +188,9 @@
                         <viewLayoutGuide key="safeArea" id="JtK-1K-0uI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="gRy-Iq-cNQ">
-                        <barButtonItem key="leftBarButtonItem" title="back" id="6C2-gu-mgD">
+                    <navigationItem key="navigationItem" title="cookr" id="gRy-Iq-cNQ">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="6C2-gu-mgD">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="bkU-Rr-xFX" kind="presentation" id="Mxh-hZ-aci"/>
                             </connections>
@@ -214,6 +208,13 @@
                         <outlet property="yy" destination="AQN-HD-Gfa" id="WpB-xJ-Qyf"/>
                     </connections>
                 </viewController>
+                <tapGestureRecognizer id="xN1-Eu-a7K">
+                    <connections>
+                        <action selector="tapPic:" destination="wMv-Op-vbL" id="hDl-Kp-x5g"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <navigationItem title="cookr" id="q5a-09-DYE"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kwh-xH-r9l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="NMb-Ig-w9N">
                     <connections>
                         <action selector="hide:" destination="wMv-Op-vbL" id="nrm-xB-viG"/>
