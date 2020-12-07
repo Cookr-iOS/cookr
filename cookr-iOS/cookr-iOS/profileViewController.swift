@@ -56,7 +56,7 @@ class profileViewController: UIViewController, MessageInputBarDelegate, UIImageP
         //self.bio = bio.text
         //let comment = PFObject(className: "comment")
         //self.hi.text = comment["bio"] as? String
-        commentBar.inputTextView.placeholder = "Update Bio..."
+        commentBar.inputTextView.placeholder = "Update status..."
         commentBar.sendButton.title = "Post"
         commentBar.delegate = self
         
@@ -65,10 +65,18 @@ class profileViewController: UIViewController, MessageInputBarDelegate, UIImageP
 //        }
         scroll.keyboardDismissMode = .onDrag
         
-      
+        commentBar.inputTextView.text = nil
+        showsCommentBar = false
+        becomeFirstResponder()
 
         let center = NotificationCenter.default
         center.addObserver(self, selector: #selector(keyboardWillBeHidden(note:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        commentBar.inputTextView.text = nil
+               
+               showsCommentBar = false
+               becomeFirstResponder()
+               commentBar.inputTextView.resignFirstResponder()
     
     }
     
@@ -94,6 +102,7 @@ class profileViewController: UIViewController, MessageInputBarDelegate, UIImageP
 
         let center = NotificationCenter.default
         center.addObserver(self, selector: #selector(keyboardWillBeHidden(note:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+
         
         let query = PFQuery(className: "User")
         query.includeKeys(["author", "comment", "bio"])
@@ -169,7 +178,9 @@ class profileViewController: UIViewController, MessageInputBarDelegate, UIImageP
            becomeFirstResponder()
             commentBar.inputTextView.resignFirstResponder()
         //self.Bio.text = comment["bio"] as? String
-       
+        commentBar.inputTextView.text = nil
+        showsCommentBar = false
+        becomeFirstResponder()
         
        // return self.hi.text = comment["bio"] as? String
         }

@@ -174,7 +174,7 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="hh" text="Here is Bio" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Wz-ex-sge">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="hh" text="Update your status..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Wz-ex-sge">
                                 <rect key="frame" x="20" y="283" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="14"/>
@@ -195,7 +195,14 @@
                         <viewLayoutGuide key="safeArea" id="JtK-1K-0uI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="cookr" id="4oK-PM-7M0"/>
+                    <navigationItem key="navigationItem" title="Title" id="gRy-Iq-cNQ">
+                        <barButtonItem key="leftBarButtonItem" title="back" id="6C2-gu-mgD">
+                            <connections>
+                                <segue destination="bkU-Rr-xFX" kind="presentation" id="Mxh-hZ-aci"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="Bio" destination="kme-7I-7Be" id="v2I-8g-W7I"/>
                         <outlet property="bio" destination="kme-7I-7Be" id="Krm-Be-92b"/>
@@ -434,6 +441,9 @@
             <point key="canvasLocation" x="2837.68115942029" y="-608.03571428571422"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Mxh-hZ-aci"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="cookr-white" width="1024" height="1024"/>
         <image name="doc.text" catalog="system" width="115" height="128"/>
