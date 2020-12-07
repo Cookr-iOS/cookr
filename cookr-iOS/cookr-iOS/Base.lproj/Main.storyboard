@@ -110,6 +110,13 @@
         <!--Profile View Controller-->
         <scene sceneID="vHO-q4-xxy">
             <objects>
+                <tapGestureRecognizer id="xN1-Eu-a7K">
+                    <connections>
+                        <action selector="tapPic:" destination="wMv-Op-vbL" id="hDl-Kp-x5g"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <navigationItem title="cookr" id="q5a-09-DYE"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kwh-xH-r9l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="wMv-Op-vbL" userLabel="Profile View Controller" customClass="profileViewController" customModule="cookr_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AQN-HD-Gfa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -154,7 +161,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DL-Ty-fYW">
-                                <rect key="frame" x="155" y="428" width="99" height="26"/>
+                                <rect key="frame" x="174" y="325" width="99" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -174,6 +181,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="T6G-G0-odx">
+                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="uCQ-RV-xn6"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Vbm-zv-Sn2"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="NMb-Ig-w9N" appends="YES" id="vzN-1C-Xpn"/>
+                                </connections>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JtK-1K-0uI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -184,14 +201,15 @@
                         <outlet property="bio" destination="kme-7I-7Be" id="Krm-Be-92b"/>
                         <outlet property="hi" destination="0Wz-ex-sge" id="84H-Nf-sFk"/>
                         <outlet property="profPic" destination="b9G-q1-bEC" id="NVX-FK-tEb"/>
+                        <outlet property="scroll" destination="T6G-G0-odx" id="HKz-pw-GIH"/>
                         <outlet property="updatebio" destination="3DL-Ty-fYW" id="LJq-uV-ghw"/>
                         <outlet property="userName" destination="wlW-jB-sFC" id="LQP-u9-rKd"/>
+                        <outlet property="yy" destination="AQN-HD-Gfa" id="WpB-xJ-Qyf"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kwh-xH-r9l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="xN1-Eu-a7K">
+                <tapGestureRecognizer id="NMb-Ig-w9N">
                     <connections>
-                        <action selector="tapPic:" destination="wMv-Op-vbL" id="hDl-Kp-x5g"/>
+                        <action selector="hide:" destination="wMv-Op-vbL" id="nrm-xB-viG"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

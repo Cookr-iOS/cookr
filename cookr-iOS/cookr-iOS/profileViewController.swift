@@ -11,7 +11,9 @@ import AlamofireImage
 import MessageInputBar
 
 class profileViewController: UIViewController, MessageInputBarDelegate, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
-
+    @IBOutlet var yy: UIView!
+    
+    @IBOutlet weak var scroll: UIScrollView!
     
     @IBOutlet weak var Bio: UILabel!
     @IBOutlet weak var userName: UILabel!
@@ -22,6 +24,11 @@ class profileViewController: UIViewController, MessageInputBarDelegate, UIImageP
     
     @IBOutlet weak var updatebio: UILabel!
     
+    
+
+    @IBAction func hide(_ sender: Any) {
+        scroll.endEditing(true)
+    }
     var showsCommentBar = true
 
     var refreshControl: UIRefreshControl!
@@ -31,7 +38,9 @@ class profileViewController: UIViewController, MessageInputBarDelegate, UIImageP
     
     @IBOutlet weak var profPic: UIImageView!
  
-   
+  
+    
+    
     @IBOutlet weak var hi: UILabel!
     //  @IBOutlet weak var bio: UILabel!
     
@@ -41,6 +50,8 @@ class profileViewController: UIViewController, MessageInputBarDelegate, UIImageP
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+       // self.hideKeyboardWhenTappedAround()
         //Bio.text = self.hi as? String
         //self.bio = bio.text
         //let comment = PFObject(className: "comment")
@@ -49,16 +60,27 @@ class profileViewController: UIViewController, MessageInputBarDelegate, UIImageP
         commentBar.sendButton.title = "Post"
         commentBar.delegate = self
         
-    
+//        func scrollViewDidScroll(_ scrollView: scroll) {
+//            view.endEditing(true)
+//        }
+        scroll.keyboardDismissMode = .onDrag
+        
+      
+
+        let center = NotificationCenter.default
+        center.addObserver(self, selector: #selector(keyboardWillBeHidden(note:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     
     }
+    
+
+   
     
     override func viewDidAppear(_ animated: Bool)
     {
         super.viewDidAppear(animated)
         
         let people = PFObject(className: "User")
-        let comment = PFObject(className: "comment")
+        
 
         //let comment = (people["comment"] as? [PFObject]) ?? []
         //comment["author"] = PFUser.current()
@@ -66,7 +88,12 @@ class profileViewController: UIViewController, MessageInputBarDelegate, UIImageP
         self.userName.text = PFUser.current()?.username
         //self.Bio.text = comment["bio"] as? String
       
-        
+        showsCommentBar = true
+                  becomeFirstResponder()
+                  commentBar.inputTextView.becomeFirstResponder()
+
+        let center = NotificationCenter.default
+        center.addObserver(self, selector: #selector(keyboardWillBeHidden(note:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         let query = PFQuery(className: "User")
         query.includeKeys(["author", "comment", "bio"])
@@ -77,11 +104,13 @@ class profileViewController: UIViewController, MessageInputBarDelegate, UIImageP
                 {
                     for query in returnedobjects
                     {
-
+                 
+                        
+                        let comment = PFObject(className: "comment")
                         let file = query["image"] as? PFFileObject
                         //self.Bio.text = comment["bio"] as? String
                       
-
+                        let c =  comment["bio"] as? String
                         
                         file?.getDataInBackground { (imageData: Data?, error: Error?) in
                             if let error = error {
@@ -89,7 +118,7 @@ class profileViewController: UIViewController, MessageInputBarDelegate, UIImageP
                             } else if let imageData = imageData {
                                 let image = UIImage(data: imageData)
                                 self.profPic.image = image
-                                self.Bio.text = query["bio"] as? String
+                                self.Bio.text = c
                             }
                         }
 
@@ -247,4 +276,16 @@ extension UIImageView {
         }
     }
 }
+
+//extension UIViewController {
+//func hideKeyboardWhenTappedAround() {
+//    let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+//    tap.cancelsTouchesInView = false
+//    view.addGestureRecognizer(tap)
+//}
+//
+//@objc func dismissKeyboard() {
+//    view.endEditing(true)
+//}
+//}
 
