@@ -192,9 +192,7 @@ class profileViewController: UIViewController, MessageInputBarDelegate, UIImageP
         }
     
    
-    
-
-    @IBAction func tapPic(_ sender: Any) {
+    @IBAction func ontapp(_ sender: Any) {
         
         let picker = UIImagePickerController()
         picker.delegate = self
@@ -212,9 +210,15 @@ class profileViewController: UIViewController, MessageInputBarDelegate, UIImageP
         
         present(picker, animated: true, completion: nil)
         
-    
     }
     
+
+//    @IBAction func tapPic(_ sender: Any) {
+//
+//
+//
+//    }
+//
 
     @IBAction func onUpdateButton(_ sender: Any) {
         
