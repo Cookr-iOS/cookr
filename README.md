@@ -27,13 +27,13 @@ Our users will be able to learn about new cultures by bringing their ideas to th
 **Required Must-have Stories**
 
 - [x] The user shall log in and log out.
-- [ ] The user shall create an account.
-- [ ] The user shall see the profile picture of another user.
-- [ ] The user shall edit their personal information.
-- [ ] The user shall see the posts from users they are following.
+- [x] The user shall create an account.
+- [x] The user shall see the profile picture of another user.
+- [x] The user shall edit their personal information.
+- [x] The user shall see the posts from users they are following.
 - [ ] The user shall see the posts from users they have not followed.
 - [ ] The user shall search for other users.
-- [ ] The user shall like posts.
+- [x] The user shall like posts.
 - [ ] The user shall see posts they liked.
 
 **Optional Nice-to-have Stories**
@@ -113,4 +113,10 @@ Our users will be able to learn about new cultures by bringing their ideas to th
 Here's a walkthrough of implemented user stories:
 
 <img src='https://github.com/Cookr-iOS/cookr/blob/main/login-demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+## Milestone #2 Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+
+<img src='http://g.recordit.co/DQ5ddidV83.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
