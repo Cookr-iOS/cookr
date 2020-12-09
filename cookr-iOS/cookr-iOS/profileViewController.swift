@@ -80,8 +80,15 @@ class profileViewController: UIViewController, MessageInputBarDelegate, UIImageP
     
     }
     
-
-   
+    
+    
+    @IBAction func onSignOut(_ sender: Any) {
+        PFUser.logOutInBackground()
+        
+        let loginVC = UIStoryboard(name:"Main", bundle: nil).instantiateViewController(identifier: "LoginViewController")
+        UIApplication.shared.windows.first?.rootViewController = loginVC
+        UIApplication.shared.windows.first?.makeKeyAndVisible()
+    }
     
     override func viewDidAppear(_ animated: Bool)
     {

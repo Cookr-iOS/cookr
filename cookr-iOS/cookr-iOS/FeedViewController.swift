@@ -7,8 +7,10 @@
 
 import UIKit
 import Parse
+import Alamofire
+import AlamofireImage
 
-class FeedViewController: UIViewController, UITableViewDelegate/*, UITableViewDataSource*/ {
+class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var tableView: UITableView!
     
@@ -20,7 +22,7 @@ class FeedViewController: UIViewController, UITableViewDelegate/*, UITableViewDa
 
         // Do any additional setup after loading the view.
         tableView.delegate = self
-        //tableView.dataSource = self
+        tableView.dataSource = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -29,6 +31,7 @@ class FeedViewController: UIViewController, UITableViewDelegate/*, UITableViewDa
         let query = PFQuery(className: "Posts")
         query.includeKey("author")
         query.limit = 20
+        query.order(byDescending: "createdAt")
         
         query.findObjectsInBackground { (posts, error) in
             if posts != nil {
@@ -42,21 +45,35 @@ class FeedViewController: UIViewController, UITableViewDelegate/*, UITableViewDa
         return posts.count
     }
     
-    /*func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let post = posts[indexPath.row]
-        tableView.dequeueReusableCell(withIdentifier: "userInfoCell") as! UserInfoTableViewCell
+        //tableView.dequeueReusableCell(withIdentifier: "userInfoCell") as! UserInfoTableViewCell
         let cell = tableView.dequeueReusableCell(withIdentifier: "feedCell") as! FeedCellTableViewCell
         
         cell.titleLabel.text = post["title"] as? String
+        
+        let author = post["author"] as! PFUser
+        cell.usernameLabel.text = author.username
+        
         
         let imageFile = post["image"] as! PFFileObject
         let urlString = imageFile.url!
         let url = URL(string: urlString)!
         
-        cell.photoView.af_setImage(withURL: url)
+        let filter = AspectScaledToFillSizeFilter(size: cell.photoView.frame.size)
+        cell.photoView.af.setImage(withURL: url, filter: filter)
         
         return cell
-    }*/
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let post = posts[indexPath.row]
+        let vc = UIStoryboard(name:"Main", bundle: nil).instantiateViewController(identifier: "RecipeViewController") as! RecipeViewController
+        vc.post = post
+        navigationController?.pushViewController(vc, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -19,6 +19,7 @@ class NewPostViewController: UIViewController, UIImagePickerControllerDelegate &
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
     }
     
     @IBAction func onPostButton(_ sender: Any) {
