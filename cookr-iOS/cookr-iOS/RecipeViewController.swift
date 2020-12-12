@@ -11,6 +11,12 @@ import AlamofireImage
 
 class RecipeViewController: UIViewController {
     
+    @IBOutlet weak var scrollie: UIScrollView!
+    
+    override class func accessibilityScroll(_ direction: UIAccessibilityScrollDirection) -> Bool {
+        true
+    }
+    
     var post: PFObject?
 
     @IBOutlet weak var titleLabel: UILabel!
@@ -21,6 +27,36 @@ class RecipeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+       
+        let contentWidth = scrollie.bounds.width
+        let contentHeight = scrollie.bounds.height * 3
+        scrollie.contentSize = CGSize(width: contentWidth, height: contentHeight)
+
+        let subviewHeight = CGFloat(120)
+        var currentViewOffset = CGFloat(0);
+
+        while currentViewOffset < contentHeight {
+//            let frame = CGRectMake(0, currentViewOffset, contentWidth, subviewHeight).rectByInsetting(dx: 5, dy: 5)
+//            let hue = currentViewOffset/contentHeight
+////            let subview = UIView(frame: frame)
+//            subview.backgroundColor = UIColor(hue: hue, saturation: 1, brightness: 1, alpha: 1)
+//            scrollie.addSubview(subview)
+
+            currentViewOffset += subviewHeight
+        }
+        
+//        scrollie = UIScrollView(frame: view.bounds)
+//           scrollie.backgroundColor = UIColor.blackColor()
+//           scrollie.contentSize = imageView.bounds.size
+//           scrollie.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
+//               
+//           scrollie.addSubview(imageView)
+//           view.addSubview(scrollView)
+        
+//        let contentWidth = scrollie.bounds.width
+//                let contentHeight = scrollie.bounds.height * 3
+//                scrollie.contentSize = CGSize(width: contentWidth, height: contentHeight)
+        
         // Do any additional setup after loading the view.
         navigationController?.navigationBar.tintColor = .white
         

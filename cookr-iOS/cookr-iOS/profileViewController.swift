@@ -109,10 +109,10 @@ class profileViewController: UIViewController, MessageInputBarDelegate, UIImageP
 //        }
 //        else{self.user?["image"] = UIImage(named: "29")}
 //
-      //  let imageFile = user["image"] as! PFFileObject
-          // let urlString = imageFile.url!
-         //  let url = URL(string: urlString)!
-      // self.profPic.imageFromUrl(urlString: url.absoluteString)
+        let imageFile = user?["image"] as! PFFileObject
+           let urlString = imageFile.url!
+           let url = URL(string: urlString)!
+       self.profPic.imageFromUrl(urlString: url.absoluteString)
         
         self.hi.text = user?["bio"] as? String
         //self.profPic = user?["image"] as! PFFileObject //self.user?["image"] as? UIImageView

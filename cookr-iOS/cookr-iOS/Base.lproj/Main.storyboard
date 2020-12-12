@@ -597,6 +597,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" restorationIdentifier="scrollie" keyboardDismissMode="onDrag" id="di7-al-hPQ">
+                                <rect key="frame" x="0.0" y="17" width="414" height="862"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="safeArea" id="Kh9-Pv-iA8"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="4pq-gh-5no"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="ZKU-eA-241"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="g9r-jz-4ly"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -623,6 +630,7 @@
                     <connections>
                         <outlet property="ingredientsLabel" destination="JFy-Uq-oiZ" id="C4h-c4-IiD"/>
                         <outlet property="recipeImage" destination="LQe-3d-IcB" id="MaQ-49-Gmw"/>
+                        <outlet property="scrollie" destination="di7-al-hPQ" id="908-vI-5YZ"/>
                         <outlet property="stepLabel" destination="hQS-T7-FnU" id="tDz-dD-UB8"/>
                         <outlet property="titleLabel" destination="AGQ-9I-wL6" id="qvV-WV-jJw"/>
                     </connections>
