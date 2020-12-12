@@ -77,6 +77,24 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 //        }
 //===================================
 
+                    //let pp = PFUser.current()
+            
+//                    if pp == nil {
+//                        pp?["image"] = Image.init()
+//                    }
+//                    else{
+            
+        let pp1 = self.user?["image"] as! PFFileObject
+                        let urlString1 = pp1.url!
+            
+            
+                        let url2 = URL(string: urlString1)!
+            
+                    let filter1 = AspectScaledToFillSizeFilter(size: cell.profilePhoto.frame.size)
+                    cell.profilePhoto.af.setImage(withURL: url2, filter: filter1)
+                   // }
+        
+
         let imageFile = post["image"] as! PFFileObject
         let urlString = imageFile.url!
         let url = URL(string: urlString)!
@@ -84,14 +102,14 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let filter = AspectScaledToFillSizeFilter(size: cell.photoView.frame.size)
         cell.photoView.af.setImage(withURL: url, filter: filter)
         
-        
+//
 //        let imageFile1 = self.user?["image"] as! PFFileObject
 //        let urlString = imageFile.url!
 //        let url = URL(string: urlString)!
-//        
+//
 //        let filter = AspectScaledToFillSizeFilter(size: self.profPic.frame.size)
 //        self.profPic.af.setImage(withURL: url, filter: filter)
-        
+//
         return cell
     }
     
