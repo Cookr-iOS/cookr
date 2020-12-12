@@ -25,7 +25,8 @@ class profileViewController: UIViewController, MessageInputBarDelegate, UIImageP
     @IBOutlet weak var updatebio: UILabel!
     
     
-
+    let user = PFUser.current()
+    
     @IBAction func hide(_ sender: Any) {
         scroll.endEditing(true)
     }
@@ -72,6 +73,7 @@ class profileViewController: UIViewController, MessageInputBarDelegate, UIImageP
         let center = NotificationCenter.default
         center.addObserver(self, selector: #selector(keyboardWillBeHidden(note:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         
+        //scroll.keyboardDismissMode()
         commentBar.inputTextView.text = nil
                
                showsCommentBar = false
@@ -94,8 +96,18 @@ class profileViewController: UIViewController, MessageInputBarDelegate, UIImageP
     {
         super.viewDidAppear(animated)
         
-        let people = PFObject(className: "User")
+        //let people = PFObject(className: "User")
         
+        let imageFile = self.user?["image"] as! PFFileObject
+        let urlString = imageFile.url!
+        let url = URL(string: urlString)!
+        
+        let filter = AspectScaledToFillSizeFilter(size: self.profPic.frame.size)
+        self.profPic.af.setImage(withURL: url, filter: filter)
+        
+        self.hi.text = user?["bio"] as? String
+        //self.profPic = user?["image"] as! PFFileObject //self.user?["image"] as? UIImageView
+      
 
         //let comment = (people["comment"] as? [PFObject]) ?? []
         //comment["author"] = PFUser.current()
@@ -111,39 +123,61 @@ class profileViewController: UIViewController, MessageInputBarDelegate, UIImageP
         center.addObserver(self, selector: #selector(keyboardWillBeHidden(note:)), name: UIResponder.keyboardWillHideNotification, object: nil)
 
         
-        let query = PFQuery(className: "User")
-        query.includeKeys(["author", "comment", "bio"])
-        query.findObjectsInBackground { (objects, error) in
-            if error == nil
-            {
-                if let returnedobjects = objects
-                {
-                    for query in returnedobjects
-                    {
-                 
-                        
-                        let comment = PFObject(className: "comment")
-                        let file = query["image"] as? PFFileObject
-                        //self.Bio.text = comment["bio"] as? String
-                      
-                        let c =  comment["bio"] as? String
-                        
-                        file?.getDataInBackground { (imageData: Data?, error: Error?) in
-                            if let error = error {
-                                print(error.localizedDescription)
-                            } else if let imageData = imageData {
-                                let image = UIImage(data: imageData)
-                                self.profPic.image = image
-                                self.Bio.text = c
-                            }
-                        }
+        
+        //let query = PFQuery(className: "User")
+        //query.includeKeys(["author", "comment", "bio"])
+       // query.whereKey("objectId", equalTo: PFUser.current()?.objectId);
+        
 
-
-
-                        }
-                    }
-                }
-            }
+     //   var user = try query.findObjects()
+     
+//        let results = query.findObjectsInBackground{ (objects, error) in
+//                if error == nil
+//                {
+//                    if let returnedobjects = objects
+//                    {
+//                        for query in returnedobjects
+//                        {
+//                            print(query)
+//                            print("jljkjk")
+//
+//                            }
+//                    }
+//
+//                    print(PFUser.current()?.objectId)
+//                }
+//            print("sdknfkdnfkjsdnfkfksdjbkldjldsbfhjlkfjldbknm")
+//        }
+   
+//        query.findObjectsInBackground { (objects, error) in
+//            if error == nil
+//            {
+//                if let returnedobjects = objects
+//                {
+//                    for query in returnedobjects
+//                    {
+//
+//
+//                        let comment = PFObject(className: "comment")
+//                        let file = query["image"] as? PFFileObject
+//                        //self.Bio.text = comment["bio"] as? String
+//
+//                        let c =  comment["bio"] as? String
+//
+//                        file?.getDataInBackground { (imageData: Data?, error: Error?) in
+//                            if let error = error {
+//                                print(error.localizedDescription)
+//                            } else if let imageData = imageData {
+//                                let image = UIImage(data: imageData)
+//                                self.profPic.image = image
+//                                self.Bio.text = c
+//                            }
+//                        }
+//
+//                        }
+//                    }
+//                }
+//            }
     }
         
     override var inputAccessoryView: UIView? {
@@ -157,14 +191,22 @@ class profileViewController: UIViewController, MessageInputBarDelegate, UIImageP
 
     func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
              //Create the comment
-            let comment = PFObject(className: "comment")
-            comment["bio"] = text
-            comment["author"] = PFUser.current()
-            
-            self.hi.text = comment["bio"] as? String
-      
+            //let comment = PFObject(className: "User")
         
-        comment.saveInBackground { (success, error) in
+//            comment["bio"] = text
+//            comment["author"] = PFUser.current()
+//
+//            self.hi.text = comment["bio"] as? String
+//
+//
+//        comment.saveInBackground { (success, error) in
+        user?["bio"] = text
+        user?["author"] = PFUser.current()
+        
+        self.hi.text = user?["bio"] as? String
+  
+    
+        user?.saveInBackground { (success, error) in
                 if success {
                     print("Comment Saved!")
                 }
@@ -220,40 +262,47 @@ class profileViewController: UIViewController, MessageInputBarDelegate, UIImageP
     }
     
 
-//    @IBAction func tapPic(_ sender: Any) {
+
+    @IBAction func onButt(_ sender: Any) {
+        //user?["image"] = PFUser.current()
+        
+        let imageData = profPic.image!.pngData()
+
+        let file = PFFileObject(name: "image.png", data: imageData!)
+
+        self.user?["image"] = file
+        
+
+        
+    }
+//    @IBAction func onUpdateButton(_ sender: Any) {
 //
+//        let people = PFObject(className: "User")
+//        //people["image"]
+//
+//
+//
+//        let imageData = profPic.image!.pngData()
+//
+//        let file = PFFileObject(name: "image.png", data: imageData!)
+//
+//        people["image"] = file
+//
+//
+//        people.saveInBackground { (success, error) in
+//            if success {
+//
+//                //self.dismiss(animated: true, completion: nil)
+//                print("saved!")
+//            }
+//            else{
+//                print("error!")
+//            }
+//
+//        }
 //
 //
 //    }
-//
-
-    @IBAction func onUpdateButton(_ sender: Any) {
-        
-        let people = PFObject(className: "User")
-
-        
-        
-        let imageData = profPic.image!.pngData()
-        
-        let file = PFFileObject(name: "image.png", data: imageData!)
-        
-        people["image"] = file
-        
-        
-        people.saveInBackground { (success, error) in
-            if success {
-      
-                //self.dismiss(animated: true, completion: nil)
-                print("saved!")
-            }
-            else{
-                print("error!")
-            }
-            
-        }
-    
-
-    }
     
     
     

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -176,7 +176,7 @@
                                     <color key="titleColor" red="1" green="0.52757322788238525" blue="0.48717156052589417" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="onUpdateButton:" destination="wMv-Op-vbL" eventType="touchUpInside" id="8Js-vR-29E"/>
+                                    <action selector="onButt:" destination="wMv-Op-vbL" eventType="touchUpInside" id="JHu-do-PVI"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DL-Ty-fYW">
@@ -201,7 +201,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="T6G-G0-odx">
-                                <rect key="frame" x="-12" y="335" width="402" height="426"/>
+                                <rect key="frame" x="0.0" y="325" width="414" height="426"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <viewLayoutGuide key="contentLayoutGuide" id="uCQ-RV-xn6"/>
@@ -258,7 +258,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3747.6923076923076" y="-608.53080568720372"/>
+            <point key="canvasLocation" x="3746.376811594203" y="-608.70535714285711"/>
         </scene>
         <!--Share Recipe View Controller-->
         <scene sceneID="61E-s0-q8t">
@@ -443,17 +443,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZZ-KU-NzB">
-                                            <rect key="frame" x="72" y="16" width="342" height="30"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="30" id="7rO-oT-71E"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qcC-um-uGN">
-                                            <rect key="frame" x="22" y="8" width="40" height="40"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qcC-um-uGN">
+                                            <rect key="frame" x="7" y="11" width="40" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="40" id="YfI-fd-AeF"/>
                                                 <constraint firstAttribute="height" constant="40" id="aBR-vq-eFk"/>
@@ -488,6 +479,15 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZZ-KU-NzB">
+                                            <rect key="frame" x="65" y="16" width="342" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="7rO-oT-71E"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="26"/>
+                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="highlightedColor" systemColor="systemBlueColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="xdy-Id-Lhi" firstAttribute="leading" secondItem="ya3-VH-ZiU" secondAttribute="leading" constant="12" id="5eg-4q-4bB"/>
@@ -498,14 +498,16 @@
                                         <constraint firstAttribute="trailing" secondItem="HZZ-KU-NzB" secondAttribute="trailing" id="HOj-vV-hBG"/>
                                         <constraint firstItem="HZZ-KU-NzB" firstAttribute="top" secondItem="ya3-VH-ZiU" secondAttribute="top" constant="16" id="J7f-DC-gaP"/>
                                         <constraint firstItem="xdy-Id-Lhi" firstAttribute="top" secondItem="84q-5p-4ZV" secondAttribute="bottom" constant="12" id="Rpo-lO-tH0"/>
+                                        <constraint firstItem="qcC-um-uGN" firstAttribute="leading" secondItem="ya3-VH-ZiU" secondAttribute="leading" constant="6" id="VTB-sA-Mei"/>
                                         <constraint firstItem="l9g-5B-RVS" firstAttribute="leading" secondItem="ya3-VH-ZiU" secondAttribute="leading" id="VxY-zw-sS6"/>
                                         <constraint firstItem="qcC-um-uGN" firstAttribute="leading" secondItem="ya3-VH-ZiU" secondAttribute="leadingMargin" constant="2" id="Wk6-bC-xKO"/>
+                                        <constraint firstItem="qcC-um-uGN" firstAttribute="leading" secondItem="ya3-VH-ZiU" secondAttribute="leading" constant="4" id="d2o-4V-ISV"/>
                                         <constraint firstAttribute="bottom" secondItem="xdy-Id-Lhi" secondAttribute="bottom" constant="12" id="dNQ-Hr-E0F"/>
                                         <constraint firstItem="qcC-um-uGN" firstAttribute="top" secondItem="ya3-VH-ZiU" secondAttribute="top" constant="8" id="oxy-Ls-R2S"/>
                                         <constraint firstItem="baX-RA-AeS" firstAttribute="leading" secondItem="84q-5p-4ZV" secondAttribute="trailing" constant="12" id="pHo-0Z-ilF"/>
                                         <constraint firstItem="l9g-5B-RVS" firstAttribute="top" secondItem="qcC-um-uGN" secondAttribute="bottom" constant="10" id="q9C-Ql-iAn"/>
                                         <constraint firstItem="84q-5p-4ZV" firstAttribute="leading" secondItem="ya3-VH-ZiU" secondAttribute="leading" constant="12" id="qj4-LN-T6F"/>
-                                        <constraint firstItem="HZZ-KU-NzB" firstAttribute="leading" secondItem="qcC-um-uGN" secondAttribute="trailing" constant="10" id="x4c-im-bfy"/>
+                                        <constraint firstItem="HZZ-KU-NzB" firstAttribute="leading" secondItem="qcC-um-uGN" secondAttribute="trailing" constant="5" id="x4c-im-bfy"/>
                                         <constraint firstAttribute="trailing" secondItem="l9g-5B-RVS" secondAttribute="trailing" id="xtb-HU-OMA"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -705,7 +707,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3o7-Sv-hwp"/>
+        <segue reference="Mxh-hZ-aci"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="comment" width="52" height="52"/>
@@ -719,6 +721,9 @@
         <image name="whisk" width="75" height="75"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

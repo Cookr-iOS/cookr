@@ -37,6 +37,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             if posts != nil {
                 self.posts = posts!
                 self.tableView.reloadData()
+            
             }
         }
     }
@@ -54,8 +55,41 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let author = post["author"] as! PFUser
         cell.usernameLabel.text = author.username
+    
         
-        
+//        let query = PFQuery(className: "User")
+//        query.includeKeys(["author", "comment", "bio"])
+//        query.findObjectsInBackground { (objects, error) in
+//            if error == nil
+//            {
+//                if let returnedobjects = objects
+//                {
+//                    for query in returnedobjects
+//                    {
+//
+//
+//                        //let comment = PFObject(className: "comment")
+//                        let file = query["image"] as? PFFileObject
+//                        //self.Bio.text = comment["bio"] as? String
+//
+//
+//                        file?.getDataInBackground { (imageData: Data?, error: Error?) in
+//                            if let error = error {
+//                                print(error.localizedDescription)
+//                            } else if let imageData = imageData {
+//                                let image = UIImage(data: imageData)
+//                                cell.profilePhoto.image = image
+//                                //self.Bio.text = c
+//                            }
+//                        }
+//
+//
+//
+//                        }
+//                    }
+//                }
+//            }
+//
         let imageFile = post["image"] as! PFFileObject
         let urlString = imageFile.url!
         let url = URL(string: urlString)!
