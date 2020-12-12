@@ -57,17 +57,17 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let author = post["author"] as! PFUser
         cell.usernameLabel.text = author.username
-        
+
+//--------STUCK ON CURRENT USER HERE - UPDATE prof pic for respective user -----
         let pp = PFUser.current()
         let pp1 = pp?["image"] as! PFFileObject
         
-        
         let urlString1 = pp1.url!
         let url1 = URL(string: urlString1)!
-//
+        
         let filter1 = AspectScaledToFillSizeFilter(size: cell.profilePhoto.frame.size)
         cell.profilePhoto.af.setImage(withURL: url1, filter: filter1)
-
+//===================================
 
         let imageFile = post["image"] as! PFFileObject
         let urlString = imageFile.url!
