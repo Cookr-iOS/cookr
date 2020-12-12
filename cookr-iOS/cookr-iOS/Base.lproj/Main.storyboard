@@ -176,7 +176,7 @@
                                     <color key="titleColor" red="1" green="0.52757322788238525" blue="0.48717156052589417" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="onUpdateButton:" destination="wMv-Op-vbL" eventType="touchUpInside" id="8Js-vR-29E"/>
+                                    <action selector="butt:" destination="wMv-Op-vbL" eventType="touchUpInside" id="7iT-oa-ARk"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DL-Ty-fYW">

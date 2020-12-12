@@ -98,12 +98,21 @@ class profileViewController: UIViewController, MessageInputBarDelegate, UIImageP
         
         //let people = PFObject(className: "User")
         
-        let imageFile = self.user?["image"] as! PFFileObject
-        let urlString = imageFile.url!
-        let url = URL(string: urlString)!
-        
-        let filter = AspectScaledToFillSizeFilter(size: self.profPic.frame.size)
-        self.profPic.af.setImage(withURL: url, filter: filter)
+    //    let imageFile = self.user?["image"] as! PFFileObject
+//        if self.user?["image"] != nil {
+//            let imageFile = self.user?["image"] as! PFFileObject
+ //               let urlString = imageFile.url!
+//        let url = URL(string: urlString)!
+
+//            let filter = AspectScaledToFillSizeFilter(size: self.profPic.frame.size)
+//            self.profPic.af.setImage(withURL: url, filter: filter)
+//        }
+//        else{self.user?["image"] = UIImage(named: "29")}
+//
+      //  let imageFile = user["image"] as! PFFileObject
+          // let urlString = imageFile.url!
+         //  let url = URL(string: urlString)!
+      // self.profPic.imageFromUrl(urlString: url.absoluteString)
         
         self.hi.text = user?["bio"] as? String
         //self.profPic = user?["image"] as! PFFileObject //self.user?["image"] as? UIImageView
@@ -261,20 +270,64 @@ class profileViewController: UIViewController, MessageInputBarDelegate, UIImageP
         
     }
     
-
-
-    @IBAction func onButt(_ sender: Any) {
-        //user?["image"] = PFUser.current()
+    @IBAction func butt(_ sender: Any) {
         
-        let imageData = profPic.image!.pngData()
-
-        let file = PFFileObject(name: "image.png", data: imageData!)
-
+       // let people = PFObject(className: "User")
+        
+                let imageData = profPic.image!.pngData()
+        
+                let file = PFFileObject(name: "image.png", data: imageData!)
+        
         self.user?["image"] = file
         
-
         
+        user?.saveInBackground { (success, error) in
+                    if success {
+        
+                        //self.dismiss(animated: true, completion: nil)
+                        print("saved!")
+                    }
+                    else{
+                        print("error!")
+                    }
+        
+                }
+
     }
+    
+//
+//    @IBAction func onButt(_ sender: Any) {
+//        //user?["image"] = PFUser.current()
+//
+////        let imageData = profPic.image!.pngData()
+////
+////        let file = PFFileObject(name: "image.png", data: imageData!)
+//        let people = PFObject(className: "User")
+//
+//                let imageData = profPic.image!.pngData()
+//
+//                let file = PFFileObject(name: "image.png", data: imageData!)
+//
+//        people["image"] = file
+//
+//
+//        people.saveInBackground { (success, error) in
+//                    if success {
+//
+//                        self.dismiss(animated: true, completion: nil)
+//                        print("saved!")
+//                    }
+//                    else{
+//                        print("error!")
+//                    }
+//
+//                }
+//
+//
+//
+//
+//
+//    }
 //    @IBAction func onUpdateButton(_ sender: Any) {
 //
 //        let people = PFObject(className: "User")
