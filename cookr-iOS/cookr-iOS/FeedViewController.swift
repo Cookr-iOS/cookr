@@ -14,6 +14,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet var tableView: UITableView!
     
+    let user = PFUser.current()
+    
     var posts = [PFObject]()
     var selectedPost: PFObject!
     
@@ -55,47 +57,32 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let author = post["author"] as! PFUser
         cell.usernameLabel.text = author.username
-    
         
-//        let query = PFQuery(className: "User")
-//        query.includeKeys(["author", "comment", "bio"])
-//        query.findObjectsInBackground { (objects, error) in
-//            if error == nil
-//            {
-//                if let returnedobjects = objects
-//                {
-//                    for query in returnedobjects
-//                    {
+        let pp = PFUser.current()
+        let pp1 = pp?["image"] as! PFFileObject
+        
+        
+        let urlString1 = pp1.url!
+        let url1 = URL(string: urlString1)!
 //
-//
-//                        //let comment = PFObject(className: "comment")
-//                        let file = query["image"] as? PFFileObject
-//                        //self.Bio.text = comment["bio"] as? String
-//
-//
-//                        file?.getDataInBackground { (imageData: Data?, error: Error?) in
-//                            if let error = error {
-//                                print(error.localizedDescription)
-//                            } else if let imageData = imageData {
-//                                let image = UIImage(data: imageData)
-//                                cell.profilePhoto.image = image
-//                                //self.Bio.text = c
-//                            }
-//                        }
-//
-//
-//
-//                        }
-//                    }
-//                }
-//            }
-//
+        let filter1 = AspectScaledToFillSizeFilter(size: cell.profilePhoto.frame.size)
+        cell.profilePhoto.af.setImage(withURL: url1, filter: filter1)
+
+
         let imageFile = post["image"] as! PFFileObject
         let urlString = imageFile.url!
         let url = URL(string: urlString)!
         
         let filter = AspectScaledToFillSizeFilter(size: cell.photoView.frame.size)
         cell.photoView.af.setImage(withURL: url, filter: filter)
+        
+        
+//        let imageFile1 = self.user?["image"] as! PFFileObject
+//        let urlString = imageFile.url!
+//        let url = URL(string: urlString)!
+//        
+//        let filter = AspectScaledToFillSizeFilter(size: self.profPic.frame.size)
+//        self.profPic.af.setImage(withURL: url, filter: filter)
         
         return cell
     }

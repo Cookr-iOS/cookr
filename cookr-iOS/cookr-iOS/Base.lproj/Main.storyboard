@@ -176,7 +176,7 @@
                                     <color key="titleColor" red="1" green="0.52757322788238525" blue="0.48717156052589417" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="onButt:" destination="wMv-Op-vbL" eventType="touchUpInside" id="JHu-do-PVI"/>
+                                    <action selector="onUpdateButton:" destination="wMv-Op-vbL" eventType="touchUpInside" id="8Js-vR-29E"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DL-Ty-fYW">
@@ -306,8 +306,8 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ingredients-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="JGf-bd-lvA">
-                                <rect key="frame" x="0.0" y="56" width="1024" height="390"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ingredients-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="JGf-bd-lvA">
+                                <rect key="frame" x="0.0" y="56" width="414" height="394"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="390" id="W0m-Ln-oU2"/>
@@ -376,7 +376,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3747.6923076923076" y="115.16587677725119"/>
+            <point key="canvasLocation" x="3746.376811594203" y="114.50892857142857"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="HFU-ka-iDj">
@@ -444,7 +444,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qcC-um-uGN">
-                                            <rect key="frame" x="7" y="11" width="40" height="40"/>
+                                            <rect key="frame" x="7" y="11" width="40" height="39"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="40" id="YfI-fd-AeF"/>
                                                 <constraint firstAttribute="height" constant="40" id="aBR-vq-eFk"/>

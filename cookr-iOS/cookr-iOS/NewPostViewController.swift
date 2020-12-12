@@ -30,6 +30,9 @@ class NewPostViewController: UIViewController, UIImagePickerControllerDelegate &
         post["step"] = stepField.text!
         post["author"] = PFUser.current()!
         
+        
+        //let imageFile = self.user?["image"] as! PFFileObject
+        
         let imageData = imageView.image!.pngData()
         let file = PFFileObject(name: "image.png", data: imageData!)
         
