@@ -31,10 +31,10 @@ Our users will be able to learn about new cultures by bringing their ideas to th
 - [x] The user shall see the profile picture of another user.
 - [x] The user shall edit their personal information.
 - [x] The user shall see the posts from users they are following.
-- [ ] The user shall see the posts from users they have not followed.
-- [ ] The user shall search for other users.
+- [x] The user shall see the posts from users they have not followed.
+- [x] The user shall search for other users.
 - [x] The user shall like posts.
-- [ ] The user shall see posts they liked.
+- [x] The user shall see posts they liked.
 
 **Optional Nice-to-have Stories**
 
@@ -120,3 +120,8 @@ Here's a walkthrough of implemented user stories:
 
 <img src='http://g.recordit.co/DQ5ddidV83.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
+## Milestone #2 Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+
+<img src='http://g.recordit.co/g9KCRm8IHf.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
